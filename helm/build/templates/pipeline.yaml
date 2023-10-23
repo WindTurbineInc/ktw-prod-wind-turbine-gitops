@@ -64,7 +64,7 @@ spec:
         name: openshift-client
       params:
         - name: SCRIPT
-          value: kubectl rollout restart ktw-prod-wind-turbine-app
+          value: kubectl rollout restart deploy ktw-prod-wind-turbine-app
         - name: VERSION
           value: latest
   workspaces:
