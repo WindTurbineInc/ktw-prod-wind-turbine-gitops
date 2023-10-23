@@ -53,6 +53,17 @@ spec:
       taskRef:
         kind: Task
         name: kaniko-gateway
+     - name: openshift-client
+      runAfter:
+        - build-and-push
+      taskRef:
+        kind: ClusterTask
+        name: openshift-client
+      params:
+        - name: SCRIPT
+          value: kubectl rollout restart ktw-prod-wind-turbine-app
+        - name: VERSION
+          value: latest
       workspaces:
         - name: source
           workspace: source-folder
