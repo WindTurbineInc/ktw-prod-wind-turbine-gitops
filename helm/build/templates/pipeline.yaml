@@ -53,7 +53,7 @@ spec:
       taskRef:
         kind: Task
         name: kaniko-gateway
-     - name: openshift-client
+    - name: openshift-client
       runAfter:
         - build-and-push
       taskRef:
