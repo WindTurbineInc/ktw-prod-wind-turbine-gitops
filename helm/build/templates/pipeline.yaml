@@ -53,6 +53,9 @@ spec:
       taskRef:
         kind: Task
         name: kaniko-gateway
+      workspaces:
+        - name: source
+          workspace: source-folder
     - name: openshift-client
       runAfter:
         - build-and-push
@@ -64,9 +67,6 @@ spec:
           value: kubectl rollout restart ktw-prod-wind-turbine-app
         - name: VERSION
           value: latest
-      workspaces:
-        - name: source
-          workspace: source-folder
   workspaces:
     - name: source-folder
     - name: maven-settings
