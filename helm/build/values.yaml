@@ -1,0 +1,15 @@
+app:
+  name: ktw-prod-wind-turbine-app
+  namespace: ktw-prod
+  cluster: .apps.wearedevs.rl97.p1.openshiftapps.com
+
+git:
+  branch: main
+  repo: https://github.com/WindTurbineInc/ktw-prod-wind-turbine
+  org: WindTurbineInc
+  name: ktw-prod-wind-turbine
+
+image:
+  host: image-registry.openshift-image-registry.svc:5000
+  name: ktw-prod/wind-turbine-app
+  tag: latest
